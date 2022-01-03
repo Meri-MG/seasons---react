@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
 import Loader from './Loader.js';
+import Error from './Error.js';
 
 class App extends React.Component{
     state = { lat: null, errorMessage: '' };
@@ -15,7 +16,7 @@ class App extends React.Component{
 
     renderContent() {
         if(this.state.errorMessage && !this.state.lat) {
-            return <div>Error: { this.state.errorMessage }</div>
+            return <Error message={ this.state.errorMessage } /> 
         }
 
         if(!this.state.errorMessage && this.state.lat) {

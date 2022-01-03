@@ -10,7 +10,8 @@
     right: 10px;
 }
 
-.season-display {
+.season-display,
+.d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,4 +32,14 @@
 
 .summer {
     background-color: orange;
+}
+
+.d-flex {
+    background-color: black;
+}
+
+.red-text {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
 }
